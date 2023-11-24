@@ -25,22 +25,66 @@ body{
     padding: 1.5rem;
 }
 
-.table{
+.discipline{
+    display: flex;
+    align-items: center;
+
+}
+table{
     width: 100%;
+    border-collapse: collapse;
+    border: none;
 }
-th{
-    width: calc(100% - 12rem);
+tr .title{
+    width: 25rem;
 }
-.reaction{
+.total{
+    color: hsl(225, 6%, 37%);
+}
+
+table td, #disciplines {
+    padding: 0.5rem;
+    border-collapse:separate;
+    border-spacing:0 1rem;
+    font-size: small;
+}
+table img{
+    width: 1rem;
+}
+td{
+    margin: 1rem;
+
+}
+td:first-child{
+    border-radius: 10px 0 0 10px;
+}
+td:last-child{
+    border-radius: 0 10px 10px 0;
+}
+
+tr{
+    border-radius: 1rem;
+}
+tr:nth-child(1) {
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+tr:nth-child(2){
+    background-color: hsla(39, 100%, 56%,0.1);
+}
+tr:nth-child(3){
+    background-color: hsla(166, 100%, 37%,0.1);
+}
+tr:nth-child(4){
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+button{
+    width: 100%;
+    border-radius: 1.5rem;
+    border: none;
     padding: 1rem;
-    background-color: brown;
-    
-
-
+    background-color: hsl(224, 30%, 27%);
+    color:hsl(0, 0%, 100%);
 }
-
-
-
 .left{
     flex: 50%;
     text-align: center;
@@ -78,3 +122,25 @@ h2{
     color: hsl(0, 0%, 100%);
 }
 
+@media screen and (max-width: 600px) {
+    .container{
+        display: grid;
+        max-width: 350px;
+        position: sticky;
+        top: 0;
+        margin: 0;
+        height: 100vh; 
+
+    }
+    .left {
+        text-align: center;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+        padding: 2rem;
+        background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    }
+
+}
